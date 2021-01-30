@@ -1,0 +1,2 @@
+C:\Users\Julia\Desktop\Fusion 360 API\FirstScript\Debug\FirstScript.dll
+C:\Users\Julia\Desktop\Fusion 360 API\FirstScript\Debug\FirstScript.pdb

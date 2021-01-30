@@ -1,0 +1,6 @@
+﻿  NewScriptSecond.cpp
+NewScriptSecond.obj : warning LNK4075: не учитывается "/EDITANDCONTINUE" из-за спецификации "/INCREMENTAL:NO"
+     Создается библиотека C:\Users\Julia\Desktop\Fusion 360 API\NewScriptSecond\Debug\NewScriptSecond.lib и объект C:\Users\Julia\Desktop\Fusion 360 API\NewScriptSecond\Debug\NewScriptSecond.exp
+  NewScriptSecond.vcxproj -> C:\Users\Julia\Desktop\Fusion 360 API\NewScriptSecond\Debug\NewScriptSecond.dll
+  C:\Users\Julia\Desktop\Fusion 360 API\NewScriptSecond\Debug\NewScriptSecond.dll
+  Скопировано файлов: 1.

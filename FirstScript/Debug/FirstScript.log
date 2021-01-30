@@ -1,0 +1,6 @@
+﻿  FirstScript.cpp
+FirstScript.obj : warning LNK4075: не учитывается "/EDITANDCONTINUE" из-за спецификации "/INCREMENTAL:NO"
+     Создается библиотека C:\Users\Julia\Desktop\Fusion 360 API\FirstScript\Debug\FirstScript.lib и объект C:\Users\Julia\Desktop\Fusion 360 API\FirstScript\Debug\FirstScript.exp
+  FirstScript.vcxproj -> C:\Users\Julia\Desktop\Fusion 360 API\FirstScript\Debug\FirstScript.dll
+  C:\Users\Julia\Desktop\Fusion 360 API\FirstScript\Debug\FirstScript.dll
+  Скопировано файлов: 1.

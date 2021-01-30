@@ -1,0 +1,12 @@
+{
+	"autodeskProduct":	"Fusion360",
+	"type":	"script",
+	"author":	"Julia Lee",
+	"description":	{
+		"":	""
+	},
+	"supportedOS":	"windows|mac",
+	"editEnabled":	true,
+	"sourcewindows":	"NewScriptSecond.vcxproj",
+	"sourcemac":	"NewScriptSecond.xcodeproj"
+}

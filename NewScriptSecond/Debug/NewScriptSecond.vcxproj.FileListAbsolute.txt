@@ -1,0 +1,2 @@
+C:\Users\Julia\Desktop\Fusion 360 API\NewScriptSecond\Debug\NewScriptSecond.dll
+C:\Users\Julia\Desktop\Fusion 360 API\NewScriptSecond\Debug\NewScriptSecond.pdb
