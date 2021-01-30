@@ -1,0 +1,285 @@
+﻿<!DOCTYPE html>
+
+<html lang="RU">
+    <head>
+      <meta charset="utf-8">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+<style >
+  .details{
+    float: right;
+    width: 60%;
+    margin-top: 3rem;
+  }
+  .spisok{
+    float: left;
+    width: 40%;
+    margin-top: 3rem;
+  }
+  .form-control{
+    width: 100%;
+    float: right;
+  }
+  .tree span:hover {
+   font-weight: bold;
+ }
+
+ .tree span {
+   cursor: pointer;
+ }
+ li {
+    list-style-type: none; 
+   }
+ 
+</style>
+        <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <div class="spisok">
+              <div class="form-group">
+                  <input type="text" class="form-control" id="txtFileName" placeholder="Поиск">
+              </div>
+              <br>
+              <h3>Вид категории</h3>
+              <ul class="tree" id="tree">
+                <li>Арматура трубопроводов
+                  <ul>
+                    <li >Трубопроводы
+                      <ul>
+                        <li>Патрубки</li>
+                        <li>Трубы</li>
+                      </ul>
+                    </li>
+                    <li>Фитинги
+                      <ul>
+                        <li>Коленья</li>
+                        <li>Наконечники</li>
+                        <li>Редукторы</li>
+                        <li>Тройники</li>
+                        <li>Уплотнения</li>
+                        <li>Фланцы</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>Детали вала
+                  <ul>
+                    <li>-
+                      <ul>
+                        <li>-</li>
+                        <li>-</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>Другие детали
+                  <ul>
+                    <li>-
+                      <ul>
+                        <li>-</li>
+                        <li>-</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>Крепежные детали
+                  <ul>
+                    <li>Болты Винты
+                      <ul>
+                        <li>С полукруглой головкой</li>
+                                <li>С потайной головкой</li>
+                                        <li>С углублением под ключ</li>
+                                                <li>С шестигранной головкой</li>
+                                                        <li>Специальные</li>
+                                                                <li>Установочные винты</li>
+                                                                      <li>Шпильки</li>
+                        <li>Гайки</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+              <script>
+                // поместить все текстовые узлы в элемент <span>
+                // он занимает только то место, которое необходимо для текста
+                for (let li of tree.querySelectorAll('li')) {
+                  let span = document.createElement('span');
+                  li.prepend(span);
+                  span.append(span.nextSibling); // поместить текстовый узел внутрь элемента <span>
+                }
+
+                //  ловим клики на всём дереве
+                tree.onclick = function(event) {
+
+                  if (event.target.tagName != 'SPAN') {
+                    return;
+                  }
+
+                  let childrenContainer = event.target.parentNode.querySelector('ul');
+                  if (!childrenContainer) return; // нет детей
+                  childrenContainer.hidden = !childrenContainer.hidden;
+                }
+              </script>
+
+</div>
+
+              <div class="details">
+                  <div class="col-md-4">
+                    <div class="thumbnail">
+                      <a>
+                        <img src="1.jpg" alt="Lights" style="width:100%;">
+                        <div class="caption">
+                          <p>Болт ГОСТ Р 50795-95</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="thumbnail">
+                      <a href="https://gallery.autodesk.com/fusion360/projects/marble-machine-clock">
+                        <img src="2.jpg" alt="Nature" style="width:100%">
+                        <div class="caption">
+                          <p>БОЛТ 2 ГОСТ 15589-70</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="thumbnail">
+                      <a href="hhttps://gallery.autodesk.com/fusion360/projects/olsryd-9-cylinder-radial-engine">
+                        <img src="3.jpg" alt="Fjords" style="width:100%">
+                        <div class="caption">
+                          <p>БОЛТ 2 ГОСТ 15590-70</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="details">
+                    <div class="col-md-4">
+                      <div class="thumbnail">
+                        <a href="https://gallery.autodesk.com/fusion360/projects/fusion-shaver-holder-normal-and-exploded">
+                          <img src="4.jpg" alt="Lights" style="width:100%;">
+                          <div class="caption">
+                            <p>БОЛТ 2 ГОСТ 15591-70</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="thumbnail">
+                        <a href="https://gallery.autodesk.com/fusion360/projects/marble-machine-clock">
+                          <img src="5.jpg" alt="Nature" style="width:100%">
+                          <div class="caption">
+                            <p>БОЛТ 2А ГОСТ 15589-70</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="thumbnail">
+                        <a href="hhttps://gallery.autodesk.com/fusion360/projects/olsryd-9-cylinder-radial-engine">
+                          <img src="6.jpg" alt="Fjords" style="width:100%">
+                          <div class="caption">
+                            <p>БОЛТ 2А ГОСТ 15590-70</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+
+            </div>
+                <!-- <div>
+                     <button type="button" class="btn btn-warning pull-right" id="btnCancel" onclick=btnCancelClick();>Cancel</button>
+
+                     <button type="button" class="btn btn-info pull-right" id="btnSave" onclick=btnSaveClick();>Save</button>
+                </div> -->
+            </div>
+
+
+
+
+         <div class="col-sm-2"></div>
+
+        </div>
+
+        </div>
+    </body>
+    <script>
+
+        //******send data from HTML to Fusion 360********
+        //when [save] button is clicked
+        function btnSaveClick(){
+
+            //will save the file and close the palette
+            var filename = document.getElementById('txtFileName').value;
+            var filetype = document.getElementById('lableFileType').textContent;
+            var filepath = document.getElementById('txtLocalPath').value;
+
+            //var localpath =
+
+            var sendStrJson = {
+                action : "save",
+                arguments : {filename:filename,filetype:filetype,filepath:filepath}
+            };
+            adsk.fusionSendData('send', JSON.stringify(sendStrJson));
+        }
+
+        //when [cancel] button is clicked
+        function btnCancelClick(){
+            //will close the palette only
+            var sendStrJson = {
+                action : "cancel",
+                arguments : null
+            };
+            adsk.fusionSendData('send', JSON.stringify(sendStrJson));
+        }
+
+        // when [type] dropdown button is clicked
+        //by jquery
+        $(".dropdown-menu a").on("click",function(e){
+
+            if(this.parentNode.parentNode.id == 'dropdownfiletype')
+            {
+                $("#lableFileType").text(this.innerText);
+            }
+
+        });
+
+        $('input[type=file]').change(function () {
+            //not working currently...
+            console.log(this.files[0].webkitdirectory);
+            document.getElementById('txtLocalPath').value = this.files[0].webkitdirectory;
+
+        });
+        //**************************************
+        //******receive data from Fusion 360********
+
+        window.fusionJavaScriptHandler = {handle: function(action, data){
+            try {
+                switch (action) {
+                    case 'initialFilePath':
+                        // set the intial value of file path
+                        document.getElementById('p1').innerHTML = data
+                        break;
+                    case 'debugger':
+                        debugger;
+                        break;
+                }
+            } catch (e) {
+                console.log(e);
+                console.log('exception caught with action: ' + action + ', data: ' + data);
+                return 'FAILED';
+            }
+            return 'OK';
+        }};
+
+    </script>
+</html>
